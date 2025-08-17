@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import ComicsCard from "./ComicsCard";
+import Home from "./Home";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <h1 className="App-title" style={{ textAlign: "center" }}>
         ImoComics
       </h1>
-      <ComicsCard />
+      <Home />
     </>
   );
 }
