@@ -1,17 +1,20 @@
-import logo from "./logo.svg";
-import "./App.css";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import ComicsCard from "./ComicsCard";
+// src/App.js
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home";
+import ComicDetail from "./ComicDetail";
 
 function App() {
   return (
-    <>
-      <h1 className="App-title" style={{ textAlign: "center" }}>
-        ImoComics
-      </h1>
-      <Home />
-    </>
+    <Router>
+      <div>
+        <h1 style={{ textAlign: "center" }}>😂 Joke Comics</h1>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/comic/:id" element={<ComicDetail />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
